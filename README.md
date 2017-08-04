@@ -9,7 +9,8 @@ for play between two players, a player and a computer, or between two computers.
 
 # Compiling
 
-When compiling the following .cpp and .h files be sure to have SDL2 libraries and source code.
+When compiling the following .cpp and .h files be sure to have SDL2 libraries and source code. Be sure to have SDL2 TTF and SDL2 Image 
+source code and libraries as well.
 
 # Possible Bug
 
