@@ -1,26 +1,26 @@
-#include "sdl_functions.h"
+#include "sdlfunctions.h"
 #include "ppfunctions.h"
 
 int main(int argc, char* argv[])
 {
-    SDL_SetHint(SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING, "1");
+	SDL_SetHint(SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING, "1");
 
-    if (!init())
-    {
-        close();
-        return 0;
-    }
+	if (!init())
+	{
+		close();
+		return 0;
+	}
 
-    bool cont = false;
+	bool cont = false;
 
-    PP Game;
+	PP Game;
 
-    while(!cont)
-    {
-        cont = Game.game_loop();
-    }
+	while (!cont)
+	{
+		cont = Game.game_loop();
+	}
 
-    close();
+	close();
 
-    return 0;
+	return 0;
 }

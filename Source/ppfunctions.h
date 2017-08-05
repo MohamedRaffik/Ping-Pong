@@ -1,14 +1,15 @@
+#pragma once
+
 #ifndef PP_FUNCTIONS
 #define PP_FUNCTIONS
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_ttf.h>
-#include <SDL2/SDL_image.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <SDL.h>
+#include <SDL_ttf.h>
+#include <SDL_image.h>
+#include <cstdlib>
+#include <cstdio>
 #include <string>
-#include <time.h>
-#include <string>
+#include <ctime>
 #include <iostream>
 
 using namespace std;
@@ -17,61 +18,61 @@ class PP
 {
 public:
 
-    void init_variables();
+	void init_variables();
 
-    bool game_loop();
+	bool game_loop();
 
-    int main_menu();
-    int option_menu();
-    int game_menu();
-    int color_menu();
-    int howtoplay_menu();
+	int main_menu();
+	int option_menu();
+	int game_menu();
+	int color_menu();
+	int howtoplay_menu();
 
-    void draw_board();
+	void draw_board();
 
-    void draw_objects();
+	void draw_objects();
 
-    void paddle_motion(SDL_Rect &paddle, int movement);
+	void paddle_motion(SDL_Rect &paddle, int movement);
 
-    void ball_motion();
+	void ball_motion();
 
-    int deflection();
+	int deflection();
 
-    void reset();
+	void reset();
 
-    void computer_paddle_motion(string side);
+	void computer_paddle_motion(string side);
 
-    bool game_over();
+	bool game_over();
 
-    bool play_again();
+	bool play_again();
 
 private:
 
-    bool players[2];
+	bool players[2];
 
-    SDL_Rect r_paddle_rect;
-    SDL_Rect l_paddle_rect;
-    SDL_Rect ball_rect;
+	SDL_Rect r_paddle_rect;
+	SDL_Rect l_paddle_rect;
+	SDL_Rect ball_rect;
 
-    SDL_Color player1_col;
-    SDL_Color player2_col;
-    SDL_Color ball_col;
+	SDL_Color player1_col;
+	SDL_Color player2_col;
+	SDL_Color ball_col;
 
-    SDL_Rect borders[4];
+	SDL_Rect borders[4];
 
-    int rally_counter;
+	int rally_counter;
 
-    bool lock;
+	bool lock;
 
-    int lock_counter;
+	int lock_counter;
 
-    int direction;
+	int direction;
 
-    int player_points[2];
+	int player_points[2];
 
-    int l_cpu_difficulty;
+	int l_cpu_difficulty;
 
-    int r_cpu_difficulty;
+	int r_cpu_difficulty;
 };
 
 #endif // PP_FUNCTIONS
