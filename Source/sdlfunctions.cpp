@@ -227,12 +227,7 @@ void fps_cap(Uint32 start, Uint32 total)
 void close()
 {
 	SDL_DestroyWindow(mWindow);
-	SDL_FreeSurface(wSurface);
-	SDL_DestroyRenderer(wRenderer);
-
 	mWindow = NULL;
-	wSurface = NULL;
-	wRenderer = NULL;
 
 	IMG_Quit();
 	SDL_Quit();
