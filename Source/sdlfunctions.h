@@ -41,13 +41,9 @@ typedef enum
 
 bool init();
 
-void write_error_to_file();
-
 int load_background();
 
 void load_image(SDL_Rect pos, string file_name);
-
-void clear_screen();
 
 void change_font(TEXT x, int fsize);
 
