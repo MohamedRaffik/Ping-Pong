@@ -1,5 +1,5 @@
 # Ping-Pong
-Using SDL 2
+Ping Pong Game using SDL 2
 
 # Description
 
